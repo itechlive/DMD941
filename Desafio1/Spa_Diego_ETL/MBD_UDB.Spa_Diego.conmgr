@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="MBD_UDB.Spa_Diego"
+  DTS:DTSID="{D1C7477B-AB85-4E27-A242-D2A5AD8D2D2A}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=MBD_UDB;Initial Catalog=Spa_Diego;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-ETL_SPA-{D1C7477B-AB85-4E27-A242-D2A5AD8D2D2A}MBD_UDB.Spa_Diego;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

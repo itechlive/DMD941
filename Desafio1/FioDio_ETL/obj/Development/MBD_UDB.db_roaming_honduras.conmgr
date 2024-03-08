@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="MBD_UDB.db_roaming_honduras"
+  DTS:DTSID="{C8286F12-C975-4795-A960-85BB36677DF0}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=MBD_UDB;Initial Catalog=db_roaming_honduras;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{C8286F12-C975-4795-A960-85BB36677DF0}MBD_UDB.db_roaming_honduras;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

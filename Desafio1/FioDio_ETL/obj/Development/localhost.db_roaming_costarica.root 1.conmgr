@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.db_roaming_costarica.root 1"
+  DTS:DTSID="{F8941555-5F9D-4696-B75E-13D149144AD6}"
+  DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="server=localhost;uid=root;Driver={MySQL ODBC 8.3 Unicode Driver};database=db_roaming_costarica;db=db_roaming_costarica;no_schema=1;port=3306;user=root;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALgw/ZBKnq0qQwsB5LCkJ0AAAAAACAAAAAAAQZgAAAAEAACAAAACB2gKcLBl2JEHrZH9coKfxAwUvtA6mwSzjC769WSzA6AAAAAAOgAAAAAIAACAAAABLD3iAFTARCD60dm2OUAuzinsBwSYq2RcGKGyiySOvxnAAAACa4Nm9nCoMMW/iEjFIu9iZOdVz1WViKpe60KynE5j7UGLHcZV2VBzxumX2xWPmmg9psz+immtTLnHJqmPpDG7L6DzN+hjOZ0+oEZ8Yh9QLnHBIrRL7wK+rkWBqg4Zv4OfVrkXESEo5qtj/k57f2MaVQAAAAP7cxK/OY0ajqoeJ/qdWLQceLhIVQWwzJdiEW+mpqOmuuUYoMHffAQBN2lk265g0k2AfCOufpL4Tr1Kta4drgZk=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

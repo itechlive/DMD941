@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="MBD_UDB.Floristeria_Fiorella"
+  DTS:DTSID="{E4C8A801-146D-4CDA-801B-B20CAC190A34}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=MBD_UDB;Initial Catalog=Floristeria_Fiorella;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{E4C8A801-146D-4CDA-801B-B20CAC190A34}MBD_UDB.Floristeria_Fiorella;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

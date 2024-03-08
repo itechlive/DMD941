@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Spa_Diego_ETL", "Spa_Diego_ETL.dtproj", "{7C48F08C-9E73-4600-93F4-356257B58670}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C48F08C-9E73-4600-93F4-356257B58670}.Development|Default.ActiveCfg = Development
+		{7C48F08C-9E73-4600-93F4-356257B58670}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22AA100D-3219-4F4B-B936-6306656CAA66}
+	EndGlobalSection
+EndGlobal

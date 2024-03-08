@@ -1,0 +1,2598 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/29/2024 3:07:52 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MBD_UDB"
+  DTS:CreatorName="MBD_UDB\SQL Server"
+  DTS:DTSID="{09B155DF-5F32-4EF7-B4B7-4CB1363FEAE9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="4105"
+  DTS:ObjectName="ETL_SPA"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{E49FFCE9-F759-4351-BEB2-E37BC24B2CCE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Santa_Tecla]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{22AE9584-392F-42DC-A9BB-E5EF6DC355C3}"
+      DTS:ObjectName="Santa_Tecla">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\SQL Server\Desktop\Archivos Desafio-20240228\Diego\SpaSantaTecla_m20191007.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{41B19E8D-3E67-4275-99AA-A99B17A27A74}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sexo"
+              DTS:DTSID="{5B65C82B-B74F-44AC-8C01-07BE8717775E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ingresos"
+              DTS:DTSID="{A17EEF74-AC1C-4DFA-A5D0-254A0BD17738}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PromVisit"
+              DTS:DTSID="{1AE2CEEB-73AF-407B-A6CF-272E3B8AAFB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Edad"
+              DTS:DTSID="{C453436F-08CA-4712-AFDF-7B5762AB57C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sauna"
+              DTS:DTSID="{7DD55E5B-3493-4A95-9B1F-F3C9BEB910AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Masaje"
+              DTS:DTSID="{843EF3FF-E9C7-491F-995B-5B75E225A5E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hidro"
+              DTS:DTSID="{FBFD4CA6-55FE-4253-9709-63E9BAB48804}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Yoga"
+              DTS:DTSID="{AC133CA9-FB76-47B2-8575-310267F521EF}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Sucursal_Centro]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4D9176FC-1FCD-4138-B415-C69B08EE0280}"
+      DTS:ObjectName="Sucursal_Centro">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\SQL Server\Desktop\Archivos Desafio-20240228\Diego\SpaCentro_m20191007.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{F3149241-2D3C-4BB0-9D70-5056E117BB60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sexo"
+              DTS:DTSID="{BD2081FF-EB0C-4103-8D12-2CE2BBA209BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ingresos"
+              DTS:DTSID="{49968498-A6A5-46FB-8F97-90FBA2DC3C51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PromVisit"
+              DTS:DTSID="{5862946F-08C1-4724-A9DD-39C7219665F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Edad"
+              DTS:DTSID="{857E293B-2EF8-42EC-AA94-BCF3F16ACC80}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sauna"
+              DTS:DTSID="{A224A62C-13C9-490D-830E-F55BBA94FC51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Masaje"
+              DTS:DTSID="{A56C07AB-AC1C-43BB-B828-6FCD93324146}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hidro"
+              DTS:DTSID="{AB524DD9-0A5D-4912-93C3-B2BED1F6D304}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Yoga"
+              DTS:DTSID="{760DD6BF-D269-4B80-8815-2002FAA5F767}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Sucursal_Escalon]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B29BC9CE-BD29-4DA2-8B6B-1C9DBF2E6204}"
+      DTS:ObjectName="Sucursal_Escalon">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\SQL Server\Desktop\Archivos Desafio-20240228\Diego\SpaEscalon_i20191007.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{E071A5EF-D54E-446D-8029-23F7F34E05E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sexo"
+              DTS:DTSID="{C8E3C8E9-E85B-47EF-88F1-8AB628ADD4A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ingresos"
+              DTS:DTSID="{469A4933-447A-4A7A-8E33-2C09611E231F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PromVisit"
+              DTS:DTSID="{2AED5A98-1089-49D3-98BB-6297A22A3398}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Edad"
+              DTS:DTSID="{C366D7E4-4307-4487-870D-0E7B43E146B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sauna"
+              DTS:DTSID="{456D3F26-17C5-4095-B5A2-A9F031D4C995}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Masaje"
+              DTS:DTSID="{0DE90786-9E0F-47B9-A6AC-40924A1EA753}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hidro"
+              DTS:DTSID="{A04786CB-ED02-41E4-AD96-E8E3F19F037C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Yoga"
+              DTS:DTSID="{9D08EF23-6D83-46BB-B771-3C60D5D3B902}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sucursal Centro"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F68C349D-79BD-4214-A59C-FC8FBC64C41A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sucursal Centro"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Sucursal Centro\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Sucursal Centro\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sucursal Centro\Derived Column.Inputs[Derived Column Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\Derived Column.Inputs[Derived Column Input].Columns[Sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sexo"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Sexo]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Sexo]} == "0" ? "Masculino" : "Femenino"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Sexo == "0" ? "Masculino" : "Femenino"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Sucursal Centro\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="25"
+                      lineageId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[id]}) ? "" : "Centro"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(id) ? "" : "Centro"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Sucursal Centro\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sucursal Centro\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Ventas]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sucursal Centro\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{D1C7477B-AB85-4E27-A242-D2A5AD8D2D2A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MBD_UDB.Spa_Diego]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sexo"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Sexo]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ingresos]"
+                      cachedDataType="cy"
+                      cachedName="ingresos"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ingresos]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[ingresos]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PromVisit]"
+                      cachedDataType="cy"
+                      cachedName="PromVisit"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromVisit]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[PromVisit]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Edad]"
+                      cachedDataType="numeric"
+                      cachedName="Edad"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Edad]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Edad]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sauna]"
+                      cachedDataType="numeric"
+                      cachedName="Sauna"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sauna]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Sauna]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Masaje]"
+                      cachedDataType="numeric"
+                      cachedName="Masaje"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Masaje]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Masaje]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Hidro]"
+                      cachedDataType="numeric"
+                      cachedName="Hidro"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hidro]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Hidro]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Yoga]"
+                      cachedDataType="numeric"
+                      cachedName="Yoga"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Yoga]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Yoga]" />
+                    <inputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="Sucursal"
+                      externalMetadataColumnId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sucursal]"
+                      lineageId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ingresos]"
+                      dataType="cy"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromVisit]"
+                      dataType="cy"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Edad]"
+                      dataType="numeric"
+                      name="Edad"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sauna]"
+                      dataType="numeric"
+                      name="Sauna"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Masaje]"
+                      dataType="numeric"
+                      name="Masaje"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hidro]"
+                      dataType="numeric"
+                      name="Hidro"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Yoga]"
+                      dataType="numeric"
+                      name="Yoga"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sucursal]"
+                      dataType="wstr"
+                      length="25"
+                      name="Sucursal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Centro\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Centro\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Centro\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Centro\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sucursal Centro\Spa Sucursal Centro"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="4105"
+              name="Spa Sucursal Centro"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sucursal Centro\Spa Sucursal Centro.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Sucursal_Centro]"
+                  connectionManagerRefId="Package.ConnectionManagers[Sucursal_Centro]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      length="50"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[ingresos]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Edad]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Edad]"
+                      name="Edad"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Sauna]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Sauna]"
+                      name="Sauna"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Masaje]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Masaje]"
+                      name="Masaje"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Hidro]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Hidro]"
+                      name="Hidro"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Yoga]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].Columns[Yoga]"
+                      name="Yoga"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      dataType="cy"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      dataType="cy"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Edad" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Yoga" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Sucursal Centro.Paths[Derived Column Output]"
+              endId="Package\Sucursal Centro\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Sucursal Centro\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Sucursal Centro.Paths[Flat File Source Output]"
+              endId="Package\Sucursal Centro\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Sucursal Centro\Spa Sucursal Centro.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sucursal Escalon"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{87115F25-F334-4992-B72A-E90FE477C987}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sucursal Escalon"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Sucursal Escalon\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Sucursal Escalon\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\Derived Column.Inputs[Derived Column Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\Derived Column.Inputs[Derived Column Input].Columns[Sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sexo"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Sexo]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Sexo]} == "0" ? "Masculino" : "Femenino"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Sexo == "0" ? "Masculino" : "Femenino"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Sucursal Escalon\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="7"
+                      lineageId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[id]}) ? "" : "Escalon"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(id) ? "" : "Escalon"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Sucursal Escalon\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sucursal Escalon\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Ventas]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sucursal Escalon\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{D1C7477B-AB85-4E27-A242-D2A5AD8D2D2A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MBD_UDB.Spa_Diego]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sexo"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Sexo]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ingresos]"
+                      cachedDataType="cy"
+                      cachedName="ingresos"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ingresos]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[ingresos]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PromVisit]"
+                      cachedDataType="cy"
+                      cachedName="PromVisit"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromVisit]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[PromVisit]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Edad]"
+                      cachedDataType="numeric"
+                      cachedName="Edad"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Edad]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Edad]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sauna]"
+                      cachedDataType="numeric"
+                      cachedName="Sauna"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sauna]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Sauna]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Masaje]"
+                      cachedDataType="numeric"
+                      cachedName="Masaje"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Masaje]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Masaje]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Hidro]"
+                      cachedDataType="numeric"
+                      cachedName="Hidro"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hidro]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Hidro]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Yoga]"
+                      cachedDataType="numeric"
+                      cachedName="Yoga"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Yoga]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Yoga]" />
+                    <inputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="7"
+                      cachedName="Sucursal"
+                      externalMetadataColumnId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sucursal]"
+                      lineageId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ingresos]"
+                      dataType="cy"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromVisit]"
+                      dataType="cy"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Edad]"
+                      dataType="numeric"
+                      name="Edad"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sauna]"
+                      dataType="numeric"
+                      name="Sauna"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Masaje]"
+                      dataType="numeric"
+                      name="Masaje"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hidro]"
+                      dataType="numeric"
+                      name="Hidro"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Yoga]"
+                      dataType="numeric"
+                      name="Yoga"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sucursal]"
+                      dataType="wstr"
+                      length="25"
+                      name="Sucursal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Escalon\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Escalon\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Escalon\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sucursal Escalon\Spa sucursal Escalon"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="4105"
+              name="Spa sucursal Escalon"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sucursal Escalon\Spa sucursal Escalon.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Sucursal_Escalon]"
+                  connectionManagerRefId="Package.ConnectionManagers[Sucursal_Escalon]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      length="50"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[ingresos]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Edad]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Edad]"
+                      name="Edad"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Sauna]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Sauna]"
+                      name="Sauna"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Masaje]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Masaje]"
+                      name="Masaje"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Hidro]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Hidro]"
+                      name="Hidro"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Yoga]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].Columns[Yoga]"
+                      name="Yoga"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      dataType="cy"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      dataType="cy"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Edad" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Yoga" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Sucursal Escalon.Paths[Derived Column Output]"
+              endId="Package\Sucursal Escalon\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Sucursal Escalon\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Sucursal Escalon.Paths[Flat File Source Output]"
+              endId="Package\Sucursal Escalon\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Sucursal Escalon\Spa sucursal Escalon.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sucursal Santa Tecla"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4BDF5430-EF18-4F77-BF4E-6E4FA9BB5128}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sucursal Santa Tecla"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Sucursal Santa Tecla\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Sucursal Santa Tecla\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\Derived Column.Inputs[Derived Column Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\Derived Column.Inputs[Derived Column Input].Columns[Sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sexo"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Sexo]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Sexo]} == "0" ? "Masculino" : "Femenino"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Sexo == "0" ? "Masculino" : "Femenino"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Sucursal Santa Tecla\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]"
+                      name="Sucursal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[id]}) ? "" : "Santa Tecla"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(id) ? "" : "Santa Tecla"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Sucursal Santa Tecla\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sucursal Santa Tecla\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="4105"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sucursal Santa Tecla\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Santa_Tecla]"
+                  connectionManagerRefId="Package.ConnectionManagers[Santa_Tecla]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      length="50"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[ingresos]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[ingresos]"
+                      name="ingresos"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[PromVisit]"
+                      name="PromVisit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Edad]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Edad]"
+                      name="Edad"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Sauna]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Sauna]"
+                      name="Sauna"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Masaje]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Masaje]"
+                      name="Masaje"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Hidro]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Hidro]"
+                      name="Hidro"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Yoga]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Yoga]"
+                      name="Yoga"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ingresos]"
+                      dataType="cy"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[PromVisit]"
+                      dataType="cy"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Edad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Edad" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sauna]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sauna" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Masaje]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Masaje" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Hidro]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Hidro" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Yoga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Yoga" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Sucursal Santa Tecla\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Ventas]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Sucursal Santa Tecla\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{D1C7477B-AB85-4E27-A242-D2A5AD8D2D2A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MBD_UDB.Spa_Diego]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sexo"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Sexo]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ingresos]"
+                      cachedDataType="cy"
+                      cachedName="ingresos"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ingresos]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[ingresos]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PromVisit]"
+                      cachedDataType="cy"
+                      cachedName="PromVisit"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromVisit]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[PromVisit]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Edad]"
+                      cachedDataType="numeric"
+                      cachedName="Edad"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Edad]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Edad]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sauna]"
+                      cachedDataType="numeric"
+                      cachedName="Sauna"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sauna]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Sauna]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Masaje]"
+                      cachedDataType="numeric"
+                      cachedName="Masaje"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Masaje]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Masaje]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Hidro]"
+                      cachedDataType="numeric"
+                      cachedName="Hidro"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hidro]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Hidro]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Yoga]"
+                      cachedDataType="numeric"
+                      cachedName="Yoga"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Yoga]"
+                      lineageId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output].Columns[Yoga]" />
+                    <inputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="Sucursal"
+                      externalMetadataColumnId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sucursal]"
+                      lineageId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Output].Columns[Sucursal]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ingresos]"
+                      dataType="cy"
+                      name="ingresos" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromVisit]"
+                      dataType="cy"
+                      name="PromVisit" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Edad]"
+                      dataType="numeric"
+                      name="Edad"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sauna]"
+                      dataType="numeric"
+                      name="Sauna"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Masaje]"
+                      dataType="numeric"
+                      name="Masaje"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hidro]"
+                      dataType="numeric"
+                      name="Hidro"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Yoga]"
+                      dataType="numeric"
+                      name="Yoga"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sucursal]"
+                      dataType="wstr"
+                      length="25"
+                      name="Sucursal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Sucursal Santa Tecla\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Santa Tecla\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Sucursal Santa Tecla\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Sucursal Santa Tecla\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Sucursal Santa Tecla.Paths[Derived Column Output]"
+              endId="Package\Sucursal Santa Tecla\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Sucursal Santa Tecla\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Sucursal Santa Tecla.Paths[Flat File Source Output]"
+              endId="Package\Sucursal Santa Tecla\Derived Column.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Sucursal Santa Tecla\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Sucursal Centro"
+          TopLeft="172,118" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Sucursal Escalon"
+          TopLeft="438,112" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Sucursal Santa Tecla"
+          TopLeft="707,105" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sucursal Centro">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Sucursal Centro\Spa Sucursal Centro"
+          TopLeft="279,71" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Sucursal Centro\Derived Column"
+          TopLeft="294,208" />
+        <EdgeLayout
+          Id="Package\Sucursal Centro.Paths[Flat File Source Output]"
+          TopLeft="371,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,95"
+              Start="0,0"
+              End="0,87.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,87.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Sucursal Centro\OLE DB Destination"
+          TopLeft="282,352" />
+        <EdgeLayout
+          Id="Package\Sucursal Centro.Paths[Derived Column Output]"
+          TopLeft="371.75,250">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,102"
+              Start="0,0"
+              End="0,94.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,94.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sucursal Centro\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Sucursal Escalon">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Sucursal Escalon\Spa sucursal Escalon"
+          TopLeft="442,89" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Sucursal Escalon\Derived Column"
+          TopLeft="442,191" />
+        <EdgeLayout
+          Id="Package\Sucursal Escalon.Paths[Flat File Source Output]"
+          TopLeft="534.5,131">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5,60"
+              Start="0,0"
+              End="-13.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-9.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5,30"
+                    Point2="-13.5,30"
+                    Point3="-13.5,34" />
+                  <mssgle:LineSegment
+                    End="-13.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Sucursal Escalon\OLE DB Destination"
+          TopLeft="423,313" />
+        <EdgeLayout
+          Id="Package\Sucursal Escalon.Paths[Derived Column Output]"
+          TopLeft="521,233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.5,80"
+              Start="0,0"
+              End="-9.5,72.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36"
+                    Point2="0,40"
+                    Point3="-4,40" />
+                  <mssgle:LineSegment
+                    End="-5.5,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.5,40"
+                    Point2="-9.5,40"
+                    Point3="-9.5,44" />
+                  <mssgle:LineSegment
+                    End="-9.5,72.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sucursal Escalon\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Sucursal Santa Tecla">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Sucursal Santa Tecla\Flat File Source"
+          TopLeft="517,89" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Sucursal Santa Tecla\Derived Column"
+          TopLeft="509,257" />
+        <EdgeLayout
+          Id="Package\Sucursal Santa Tecla.Paths[Flat File Source Output]"
+          TopLeft="591.5,131">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,126"
+              Start="0,0"
+              End="0,118.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,118.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Sucursal Santa Tecla\OLE DB Destination"
+          TopLeft="503,391" />
+        <EdgeLayout
+          Id="Package\Sucursal Santa Tecla.Paths[Derived Column Output]"
+          TopLeft="589.75,299">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,92"
+              Start="0,0"
+              End="0,84.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,84.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sucursal Santa Tecla\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
