@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\SQL Server\\Desktop\\Ejercicio1\\Spa_Diego_ETL\\",
+  "WorkspaceRootPath": "C:\\Users\\SQL Server\\Desktop\\Ejercicio1\\Floristeria_Fiorella\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C48F08C-9E73-4600-93F4-356257B58670}|Spa_Diego_ETL.dtproj|C:\\Users\\SQL Server\\Desktop\\Ejercicio1\\Spa_Diego_ETL\\ETL_SPA.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{7C48F08C-9E73-4600-93F4-356257B58670}|Spa_Diego_ETL.dtproj|solutionrelative:ETL_SPA.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{4925E75F-0039-4DA0-A582-702CD455926C}|Floristeria_Fiorella.dtproj|C:\\Users\\SQL Server\\Desktop\\Ejercicio1\\Floristeria_Fiorella\\Package.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{4925E75F-0039-4DA0-A582-702CD455926C}|Floristeria_Fiorella.dtproj|solutionrelative:Package.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ETL_SPA.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\SQL Server\\Desktop\\Ejercicio1\\Spa_Diego_ETL\\ETL_SPA.dtsx",
-              "RelativeDocumentMoniker": "ETL_SPA.dtsx",
-              "ToolTip": "C:\\Users\\SQL Server\\Desktop\\Ejercicio1\\Spa_Diego_ETL\\ETL_SPA.dtsx [Design]",
-              "RelativeToolTip": "ETL_SPA.dtsx [Design]",
+              "Title": "Package.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\SQL Server\\Desktop\\Ejercicio1\\Floristeria_Fiorella\\Package.dtsx",
+              "RelativeDocumentMoniker": "Package.dtsx",
+              "ToolTip": "C:\\Users\\SQL Server\\Desktop\\Ejercicio1\\Floristeria_Fiorella\\Package.dtsx [Design]",
+              "RelativeToolTip": "Package.dtsx [Design]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2024-03-09T22:18:26.999Z",
+              "WhenOpened": "2024-03-04T23:41:50.756Z",
               "EditorCaption": " [Design]"
             }
           ]
