@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Informev3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC89D754-1632-45C4-955E-B145DE205A50}|Informev3.rptproj|C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Informev3\\Report1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{AC89D754-1632-45C4-955E-B145DE205A50}|Informev3.rptproj|solutionrelative:Report1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Report1.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Informev3\\Report1.rdl",
+              "RelativeDocumentMoniker": "Report1.rdl",
+              "ToolTip": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Informev3\\Report1.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "Report1.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-24T05:11:50.604Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

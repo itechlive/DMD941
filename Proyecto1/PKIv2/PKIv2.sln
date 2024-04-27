@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "PKIv2", "PKIv2.dwproj", "{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}.Development|Default.ActiveCfg = Development
+		{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}.Development|Default.Build.0 = Development
+		{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F6020C0-A1F8-433E-8A04-EAC4E568ADB1}
+	EndGlobalSection
+EndGlobal

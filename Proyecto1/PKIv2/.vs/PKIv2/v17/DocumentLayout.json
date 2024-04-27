@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}|PKIv2.dwproj|C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Ventas.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}|PKIv2.dwproj|solutionrelative:Ventas.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}|PKIv2.dwproj|C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Datos Financieros.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}|PKIv2.dwproj|solutionrelative:Datos Financieros.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}|PKIv2.dwproj|C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Finanzas.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{8BC16D17-3CF9-486D-B682-6F8B2A7FF5A1}|PKIv2.dwproj|solutionrelative:Finanzas.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ventas.cube [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Ventas.cube",
+              "RelativeDocumentMoniker": "Ventas.cube",
+              "ToolTip": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Ventas.cube [Dise\u00F1o]",
+              "RelativeToolTip": "Ventas.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-24T04:52:47.713Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Datos Financieros.dim [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Datos Financieros.dim",
+              "RelativeDocumentMoniker": "Datos Financieros.dim",
+              "ToolTip": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Datos Financieros.dim [Dise\u00F1o]",
+              "RelativeToolTip": "Datos Financieros.dim [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-24T04:52:35.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Finanzas.dsv [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Finanzas.dsv",
+              "RelativeDocumentMoniker": "Finanzas.dsv",
+              "ToolTip": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\PKIv2\\Finanzas.dsv [Dise\u00F1o]",
+              "RelativeToolTip": "Finanzas.dsv [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-24T04:51:21.588Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

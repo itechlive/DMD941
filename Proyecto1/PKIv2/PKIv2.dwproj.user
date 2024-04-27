@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Finanzas</Id>
+            <Name>Finanzas</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANoxeA5py6Emz7MZOuSuIpQAAAAASAAAARgBpAG4AYQBuAHoAYQBzAAAAEGYAAAABAAAgAAAAMleB6TslXEiRctWufyQyoNHoWzKseXD8p/N540DIofkAAAAADoAAAAACAAAgAAAAQmhccjHf6YRDkW30ZZoebIHmI6+perNXJSRqQ1ozAeAQAAAAJZ2ykHGUfksWBVp1vL96JUAAAAAzSaywoJyf8YId1Da2iVUEwecrBX4+qTTMvCi3jBQoYnO2kCXdYKNg7w/3BmIOtgosg+5QngabZPuWpXWZ25+q</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Finanzas</Id>
+            <Name>Finanzas</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANoxeA5py6Emz7MZOuSuIpQAAAAASAAAARgBpAG4AYQBuAHoAYQBzAAAAEGYAAAABAAAgAAAAt+jA1QuBQK1WMUxfcmSHn1gTIT60HlKfCJFwSB6pM/cAAAAADoAAAAACAAAgAAAA4zNix3TlO4tbHVfVLsvLJjAqfNzJnUfIilmKxgPJOBkgAAAA+vW69fQ9q6Xad3FX/9YnMdo1PBCSwFsd3Q8uZVmRjr1AAAAAi4JsXKmyxp1UtQuXBNt/lT3Bm9MfglSf1924TQVtTZFVt6wLypixyiOBlM4HxHn+LLs1yNxwmUZlt7NCD/QwkA==</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>PKIv2</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
