@@ -1,0 +1,354 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="15a78773-8898-49c2-8d0e-178da52ed627" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>2022 SV Mobility</ID>
+  <Name>2022 SV Mobility</Name>
+  <CreatedTimestamp>0001-01-01T07:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T07:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-576" scrolltop="-5781" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9446" y="16563" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="2022_SV_Mobility" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="8255" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003f20000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_2022_SV_Mobility" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-576</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5781</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T07:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="94b94869-d786-4c32-9593-9d36e88a8c75">
+    <DataSourceViewID>Mobility Report</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="a4c69bf4-35b9-41c5-96ca-001988d655e8">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="36398590-8318-4854-aca9-b44da91857c4">
+      <ID>Sub Region 1</ID>
+      <Name>Sub Region 1</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ce1a05bb-6892-494f-a5b3-9a3bea1dc561">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="41494a00-f20f-496b-b367-981dced28fbd">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>sub_region_1</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="e8c54a22-2c9c-4aa4-a8eb-8b6a362f16b8">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="033a9aba-ecad-47b4-b803-121f85a6ac84">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>date</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="74a304fe-95b7-4591-87fe-f75c9b8c9924">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="52d348af-eb09-4acd-8d6d-84d593db2f1e">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>retail_and_recreation_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="bea3e33e-9858-4603-b749-4a01175a6f84">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="338c8980-f4f7-4196-931a-1cb272db376c">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>grocery_and_pharmacy_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ddc84615-88dd-4d79-83f6-e3cedcd703cf">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c68ac6c4-d447-4fd5-a463-f7fdba226d19">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>parks_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="65162fc4-0fa0-4bbe-aa1b-35dd53b607ba">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fc75bffc-acee-4154-b842-25bf2c8692b2">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>transit_stations_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="de3d594c-382f-4bfe-82dd-2a22db06d437">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c8d2d28c-77fe-4563-bede-618838aca581">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>workplaces_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="d99982a2-a19e-449a-8735-cc946345a36e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f73cdb78-90f8-44e3-a9e9-c9890e5f5c4c">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>residential_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="9fc9850c-49cf-4c38-8fbb-9f1d87da88f7">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="eef178df-62e6-4788-b4af-832b4fac2d2b">
+          <TableID>dbo_2022_SV_Mobility</TableID>
+          <ColumnID>sub_region_1</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="68b406fe-7ee9-42d2-be93-089ed5ccae0d">
+          <AttributeID>Retail And Recreation Percent Change From Baseline</AttributeID>
+          <Name>Retail And Recreation Percent Change From Baseline</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a03eaa10-f228-4994-b07e-ba920712b11e">
+          <AttributeID>Grocery And Pharmacy Percent Change From Baseline</AttributeID>
+          <Name>Grocery And Pharmacy Percent Change From Baseline</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a85841c9-4aa4-4ee5-a97b-55cd696b352b">
+          <AttributeID>Parks Percent Change From Baseline</AttributeID>
+          <Name>Parks Percent Change From Baseline</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7b945f69-a768-49d4-af66-5bef50ccac0c">
+          <AttributeID>Transit Stations Percent Change From Baseline</AttributeID>
+          <Name>Transit Stations Percent Change From Baseline</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9e647d0e-7826-47a0-a66b-7fb5f719fae2">
+          <AttributeID>Workplaces Percent Change From Baseline</AttributeID>
+          <Name>Workplaces Percent Change From Baseline</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2a49faf0-49fa-4636-83c9-f27e67c4d026">
+          <AttributeID>Residential Percent Change From Baseline</AttributeID>
+          <Name>Residential Percent Change From Baseline</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="630d8d81-ed23-4e41-af55-db69d6828962">
+          <AttributeID>Date</AttributeID>
+          <Name>Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="db4e8fe4-9f02-4e3b-bda4-98958c0ef14c">
+      <ID>Retail And Recreation Percent Change From Baseline</ID>
+      <Name>Retail And Recreation Percent Change From Baseline</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b6228a5e-3f4a-4ca6-881c-a9be5d8539e5">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="52ab99f1-0495-4318-825e-aec97a04f153">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>retail_and_recreation_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1d074ac5-eed7-4657-b3e5-99c0fff0e5bf">
+      <ID>Grocery And Pharmacy Percent Change From Baseline</ID>
+      <Name>Grocery And Pharmacy Percent Change From Baseline</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="79b1cbf3-50b5-4f0e-80d0-d5003b32d8f9">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4a05e752-5dab-4ce5-8fff-5eaac3b8d367">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>grocery_and_pharmacy_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3f997278-fe65-4808-85ac-ba3eb14d52f5">
+      <ID>Parks Percent Change From Baseline</ID>
+      <Name>Parks Percent Change From Baseline</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1b6f957b-bb9f-487f-a8c6-f48e594be2e4">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee2c98a5-ee5d-49b5-b114-20e91eb80825">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>parks_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dbf7344f-d33b-4c60-b479-8c5ba8c10d4c">
+      <ID>Transit Stations Percent Change From Baseline</ID>
+      <Name>Transit Stations Percent Change From Baseline</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="73aefca3-4310-46c2-870b-c573902df06f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="20303c75-4912-4c16-9c5e-907078bb726e">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>transit_stations_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dad12796-d5df-44a4-af22-f52c001ba178">
+      <ID>Workplaces Percent Change From Baseline</ID>
+      <Name>Workplaces Percent Change From Baseline</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="08ef3cc3-307a-4c88-9c1c-a8cacf197cc0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e93e39cc-f5a6-4af6-9817-9f3a3deeb109">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>workplaces_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="60d616a9-6451-45d8-ba7d-2fdc0782870a">
+      <ID>Residential Percent Change From Baseline</ID>
+      <Name>Residential Percent Change From Baseline</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="adc72cae-c0b3-4181-b0a9-2e28c63c774c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c054d36a-ca08-4bef-bda7-f1e01b6aab21">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>residential_percent_change_from_baseline</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0676559e-8ff2-4450-aee0-f70b8d588de0">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fbc79f09-32f7-4b87-815d-3a820ce96798">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="53567317-3f5e-4a24-ad2e-4ec226dbc1c3">
+            <TableID>dbo_2022_SV_Mobility</TableID>
+            <ColumnID>date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="a6f2bd7d-b4de-4ae1-abba-b18269e9d4d1">
+      <ID>Jerarquía</ID>
+      <Name>Jerarquía</Name>
+      <Levels>
+        <Level dwd:design-time-name="53f24393-ff5f-4da2-9660-5501f1c1a73d">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <SourceAttributeID>Date</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="448ac655-241a-4bae-9f43-d68ef8e461ff">
+          <ID>Sub Region 1</ID>
+          <Name>Sub Region 1</Name>
+          <SourceAttributeID>Sub Region 1</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b303edf7-8032-4320-a494-5fd162bb2585">
+          <ID>Retail And Recreation Percent Change From Baseline</ID>
+          <Name>Retail And Recreation Percent Change From Baseline</Name>
+          <SourceAttributeID>Retail And Recreation Percent Change From Baseline</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e0ae0d65-1a5c-4431-ae94-f0ee0924cafc">
+          <ID>Grocery And Pharmacy Percent Change From Baseline</ID>
+          <Name>Grocery And Pharmacy Percent Change From Baseline</Name>
+          <SourceAttributeID>Grocery And Pharmacy Percent Change From Baseline</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c563c7e1-51eb-43b9-b2da-df97f43bd2c7">
+          <ID>Parks Percent Change From Baseline</ID>
+          <Name>Parks Percent Change From Baseline</Name>
+          <SourceAttributeID>Parks Percent Change From Baseline</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="90801e01-2bb1-42a2-85d4-629be694f094">
+          <ID>Transit Stations Percent Change From Baseline</ID>
+          <Name>Transit Stations Percent Change From Baseline</Name>
+          <SourceAttributeID>Transit Stations Percent Change From Baseline</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="21634089-e73a-4e72-b21c-51d9e532e4ab">
+          <ID>Workplaces Percent Change From Baseline</ID>
+          <Name>Workplaces Percent Change From Baseline</Name>
+          <SourceAttributeID>Workplaces Percent Change From Baseline</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="0b206a85-9995-4dc2-a8e4-d446439d5f2b">
+          <ID>Residential Percent Change From Baseline</ID>
+          <Name>Residential Percent Change From Baseline</Name>
+          <SourceAttributeID>Residential Percent Change From Baseline</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

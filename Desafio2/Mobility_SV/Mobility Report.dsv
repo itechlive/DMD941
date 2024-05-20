@@ -1,0 +1,165 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8990ce67-13ad-4ed7-b238-469cf71415c6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Mobility Report</ID>
+  <Name>Mobility Report</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Mobility Report</DataSourceID>
+  <Schema>
+    <xs:schema id="Mobility_x0020_Report" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Mobility_x0020_Report" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="3d3d7449-d68e-4f83-a482-4c68e4caee11">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_2022_SV_Mobility" msprop:DbTableName="2022_SV_Mobility" msprop:FriendlyName="2022_SV_Mobility" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="2c013487-f520-4864-b4e9-1b07aff66b61">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="country_region_code" msprop:FriendlyName="country_region_code" msprop:DbColumnName="country_region_code" msprop:design-time-name="68ba672f-309e-4c49-9ea5-594309c71f02" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="country_region" msprop:FriendlyName="country_region" msprop:DbColumnName="country_region" msprop:design-time-name="3ba4067f-0f15-43a2-8daf-0cc1a7451c10" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sub_region_1" msprop:FriendlyName="sub_region_1" msprop:DbColumnName="sub_region_1" msprop:design-time-name="abd91347-4b77-40d6-b67f-924e40d826ca" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="sub_region_2" msprop:FriendlyName="sub_region_2" msprop:DbColumnName="sub_region_2" msprop:design-time-name="6fba9b28-55d2-4e68-9dbf-228fd231bc81" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="metro_area" msprop:FriendlyName="metro_area" msprop:DbColumnName="metro_area" msprop:design-time-name="3c9f2fb5-5c16-4498-8aa3-5fff3342012a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="iso_3166_2_code" msprop:FriendlyName="iso_3166_2_code" msprop:DbColumnName="iso_3166_2_code" msprop:design-time-name="e428deab-0cf8-4ba4-8882-eb0b61415dcc" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="census_fips_code" msprop:FriendlyName="census_fips_code" msprop:DbColumnName="census_fips_code" msprop:design-time-name="6ce71751-9029-4b1b-928a-2a47f3968bb0" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="place_id" msprop:FriendlyName="place_id" msprop:DbColumnName="place_id" msprop:design-time-name="ab7f79f9-b82f-4fba-9939-2f80c054da6d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="date" msprop:FriendlyName="date" msprop:DbColumnName="date" msprop:design-time-name="681d0c57-68c2-4ae7-9aad-f9ec85911c3f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="retail_and_recreation_percent_change_from_baseline" msprop:FriendlyName="retail_and_recreation_percent_change_from_baseline" msprop:DbColumnName="retail_and_recreation_percent_change_from_baseline" msprop:design-time-name="0867efcb-b7d5-4c1c-9694-cf821e14d444" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="grocery_and_pharmacy_percent_change_from_baseline" msprop:FriendlyName="grocery_and_pharmacy_percent_change_from_baseline" msprop:DbColumnName="grocery_and_pharmacy_percent_change_from_baseline" msprop:design-time-name="6a56a282-9b48-442f-8441-2414d3c5e5b5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="parks_percent_change_from_baseline" msprop:FriendlyName="parks_percent_change_from_baseline" msprop:DbColumnName="parks_percent_change_from_baseline" msprop:design-time-name="d376510c-9f12-41ae-b331-68fecedbf593" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="transit_stations_percent_change_from_baseline" msprop:FriendlyName="transit_stations_percent_change_from_baseline" msprop:DbColumnName="transit_stations_percent_change_from_baseline" msprop:design-time-name="668786cc-3350-4ffe-9a9f-b82ba3ce11ca" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="workplaces_percent_change_from_baseline" msprop:FriendlyName="workplaces_percent_change_from_baseline" msprop:DbColumnName="workplaces_percent_change_from_baseline" msprop:design-time-name="4551dd19-a309-4604-a009-69c79366e0b2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="residential_percent_change_from_baseline" msprop:FriendlyName="residential_percent_change_from_baseline" msprop:DbColumnName="residential_percent_change_from_baseline" msprop:design-time-name="ba5d656c-d30b-4495-ae2c-537d73d7a67d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <Mobility_x0020_Report xmlns="" />
+  </Schema>
+</DataSourceView>

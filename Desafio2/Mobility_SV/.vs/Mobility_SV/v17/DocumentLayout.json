@@ -1,0 +1,65 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_SV\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE9FDFEB-F970-4159-B402-D0903992B24F}|..\\Mobility_Reporte\\Mobility_Reporte.rptproj|C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_Reporte\\SV_Mobility_Report.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BBC32C3-F609-4FBD-8644-DEBBAEB96B26}|Mobility_SV.dwproj|C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_SV\\Mobility Report.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{0BBC32C3-F609-4FBD-8644-DEBBAEB96B26}|Mobility_SV.dwproj|solutionrelative:Mobility Report.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BBC32C3-F609-4FBD-8644-DEBBAEB96B26}|Mobility_SV.dwproj|C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_SV\\2022 SV Mobility.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{0BBC32C3-F609-4FBD-8644-DEBBAEB96B26}|Mobility_SV.dwproj|solutionrelative:2022 SV Mobility.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SV_Mobility_Report.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_Reporte\\SV_Mobility_Report.rdl",
+              "RelativeDocumentMoniker": "..\\Mobility_Reporte\\SV_Mobility_Report.rdl",
+              "ToolTip": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_Reporte\\SV_Mobility_Report.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "..\\Mobility_Reporte\\SV_Mobility_Report.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-18T04:25:38.882Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "2022 SV Mobility.dim [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_SV\\2022 SV Mobility.dim",
+              "RelativeDocumentMoniker": "2022 SV Mobility.dim",
+              "ToolTip": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_SV\\2022 SV Mobility.dim [Dise\u00F1o]",
+              "RelativeToolTip": "2022 SV Mobility.dim [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-18T03:32:51.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mobility Report.cube [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_SV\\Mobility Report.cube",
+              "RelativeDocumentMoniker": "Mobility Report.cube",
+              "ToolTip": "C:\\Users\\SQL_Admin\\Desktop\\Analisis\\Mobility_SV\\Mobility Report.cube [Dise\u00F1o]",
+              "RelativeToolTip": "Mobility Report.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-18T03:31:53.995Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
