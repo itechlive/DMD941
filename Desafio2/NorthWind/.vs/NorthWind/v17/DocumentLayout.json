@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SQL_Admin\\Desktop\\Desafio2\\NorthWind\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C311D88F-CC46-4659-8B7E-C341D72B37E9}|NorthWind.dwproj|C:\\Users\\SQL_Admin\\Desktop\\Desafio2\\Northwind\\Northwind.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{C311D88F-CC46-4659-8B7E-C341D72B37E9}|NorthWind.dwproj|solutionrelative:Northwind.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Northwind.cube [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SQL_Admin\\Desktop\\Desafio2\\Northwind\\Northwind.cube",
+              "RelativeDocumentMoniker": "Northwind.cube",
+              "ToolTip": "C:\\Users\\SQL_Admin\\Desktop\\Desafio2\\Northwind\\Northwind.cube [Dise\u00F1o]",
+              "RelativeToolTip": "Northwind.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-20T03:46:25.984Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
