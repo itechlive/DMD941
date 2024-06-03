@@ -1,0 +1,185 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="32a4a657-c016-4ef9-b68b-4fd7c39f53e6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Facturas</ID>
+  <Name>Facturas</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Facturas</DataSourceID>
+  <Schema>
+    <xs:schema id="Facturas" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Facturas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="6172262a-da1c-4330-982c-32682391ed45">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Factura" msprop:DbTableName="Factura" msprop:FriendlyName="Factura" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="7d15ed22-f743-4fc8-a020-0dd439ff6c0a">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Serie" msprop:FriendlyName="Serie" msprop:DbColumnName="Serie" msprop:design-time-name="5f995aa9-b069-4833-a370-623e98a699f0" type="xs:int" minOccurs="0" />
+                  <xs:element name="Número" msprop:FriendlyName="Número" msprop:DbColumnName="Número" msprop:design-time-name="f4ae23c2-450c-4f29-a559-0bcf13e7d20f" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Fecha" msprop:FriendlyName="Fecha" msprop:DbColumnName="Fecha" msprop:design-time-name="6947b985-28bf-49b0-9083-df6928f935a6" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Código_x0020_Sector" msprop:FriendlyName="Código Sector" msprop:DbColumnName="Código Sector" msprop:design-time-name="c79ac0f2-d169-4670-b9f2-6ff80f2c2b3d" type="xs:int" minOccurs="0" />
+                  <xs:element name="Código_x0020_País" msprop:FriendlyName="Código País" msprop:DbColumnName="Código País" msprop:design-time-name="edce0283-0804-4fe6-9a40-2a8a985558ea" type="xs:int" minOccurs="0" />
+                  <xs:element name="Código_x0020_Vendedor" msprop:FriendlyName="Código Vendedor" msprop:DbColumnName="Código Vendedor" msprop:design-time-name="7d95082c-34c9-45a0-b305-8ae8ae3b6e28" type="xs:int" minOccurs="0" />
+                  <xs:element name="Código_x0020_Gaseosa" msprop:FriendlyName="Código Gaseosa" msprop:DbColumnName="Código Gaseosa" msprop:design-time-name="4fbd5178-69d4-4ad1-a0d7-acd5e1b0195a" type="xs:int" minOccurs="0" />
+                  <xs:element name="Ppto" msprop:FriendlyName="Ppto" msprop:DbColumnName="Ppto" msprop:design-time-name="b0dfef5a-afe6-44d3-938b-622742289f71" type="xs:double" minOccurs="0" />
+                  <xs:element name="Cantidad" msprop:FriendlyName="Cantidad" msprop:DbColumnName="Cantidad" msprop:design-time-name="32f34861-ba4a-41e6-a078-83183b1ce725" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Merma" msprop:FriendlyName="Merma" msprop:DbColumnName="Merma" msprop:design-time-name="476789fe-c682-4757-8ed0-538f4838744d" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Subtotal" msprop:FriendlyName="Subtotal" msprop:DbColumnName="Subtotal" msprop:design-time-name="14402aa9-8714-4b1d-a487-bed65e3ae087" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="IGV" msprop:FriendlyName="IGV" msprop:DbColumnName="IGV" msprop:design-time-name="6bacb4ad-f9fc-4ef4-b9a9-5b15b3ac3f96" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Total" msprop:FriendlyName="Total" msprop:DbColumnName="Total" msprop:design-time-name="c06e1857-2abe-4794-892e-46801d6e5c4f" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Gaseosa" msprop:DbTableName="Gaseosa" msprop:FriendlyName="Gaseosa" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="dda52489-9b4a-4b5c-ae6d-6e00a68dd55f">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Código_x0020_Gaseosa" msprop:FriendlyName="Código Gaseosa" msprop:DbColumnName="Código Gaseosa" msprop:design-time-name="367129c9-cc82-46b7-9533-b11edbe2545e" type="xs:int" />
+                  <xs:element name="Nombre_x0020_Gaseosa" msprop:FriendlyName="Nombre Gaseosa" msprop:DbColumnName="Nombre Gaseosa" msprop:design-time-name="786b9f8a-e1db-43a8-8f32-add7fa976282" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Precio" msprop:FriendlyName="Precio" msprop:DbColumnName="Precio" msprop:design-time-name="c8493759-3fee-4377-a485-9ebe10c790e0" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_País" msprop:DbTableName="País" msprop:FriendlyName="País" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="fbbc3da5-1973-41c6-8d1a-a95c9228a09d">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Código_x0020_País" msprop:FriendlyName="Código País" msprop:DbColumnName="Código País" msprop:design-time-name="0cb040c6-985d-4723-bcee-872644f42d54" type="xs:int" />
+                  <xs:element name="Nombre" msprop:FriendlyName="Nombre" msprop:DbColumnName="Nombre" msprop:design-time-name="3b4df154-d97d-4220-b96b-cc4f59007d13" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Sector" msprop:DbTableName="Sector" msprop:FriendlyName="Sector" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="fd52466f-e80c-48b4-98f5-61b8fd221a49">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Código_x0020_Sector" msprop:FriendlyName="Código Sector" msprop:DbColumnName="Código Sector" msprop:design-time-name="dfd799d5-0342-4c0d-970c-89b22c763403" type="xs:int" />
+                  <xs:element name="Descripción_x0020_Sector" msprop:FriendlyName="Descripción Sector" msprop:DbColumnName="Descripción Sector" msprop:design-time-name="98cfc77f-649e-4c6c-a33c-d75d876d41ce" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Supervisor" msprop:DbTableName="Supervisor" msprop:FriendlyName="Supervisor" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="ab53ebf9-9803-4927-a28d-d15db761a18d">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Código_x0020_Supervisor" msprop:FriendlyName="Código Supervisor" msprop:DbColumnName="Código Supervisor" msprop:design-time-name="916ba403-e249-4c79-8fc2-715500323e84" type="xs:int" />
+                  <xs:element name="Nombre_x0020_Supervisor" msprop:FriendlyName="Nombre Supervisor" msprop:DbColumnName="Nombre Supervisor" msprop:design-time-name="d24e74f4-ef57-4f49-9d84-da7c91317035" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Vendedor" msprop:DbTableName="Vendedor" msprop:FriendlyName="Vendedor" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="a5075b49-238a-40e2-8b35-517d918ac55b">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Código_x0020_Vendedor" msprop:FriendlyName="Código Vendedor" msprop:DbColumnName="Código Vendedor" msprop:design-time-name="a840b5e6-fcbb-4640-b37c-73894e8715d6" type="xs:int" />
+                  <xs:element name="Nombre_x0020_Vendedor" msprop:FriendlyName="Nombre Vendedor" msprop:DbColumnName="Nombre Vendedor" msprop:design-time-name="5538a9ec-5997-4eee-9f3e-c8c46c05a931" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Código_x0020_Supervisor" msprop:FriendlyName="Código Supervisor" msprop:DbColumnName="Código Supervisor" msprop:design-time-name="42dd3438-9df1-47e0-aab8-3f90b01766ce" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Gaseosa" />
+          <xs:field xpath="Código_x0020_Gaseosa" />
+        </xs:unique>
+        <xs:unique name="dbo_País_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_País" />
+          <xs:field xpath="Código_x0020_País" />
+        </xs:unique>
+        <xs:unique name="dbo_Sector_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Sector" />
+          <xs:field xpath="Código_x0020_Sector" />
+        </xs:unique>
+        <xs:unique name="dbo_Supervisor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Supervisor" />
+          <xs:field xpath="Código_x0020_Supervisor" />
+        </xs:unique>
+        <xs:unique name="dbo_Vendedor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Vendedor" />
+          <xs:field xpath="Código_x0020_Vendedor" />
+        </xs:unique>
+        <xs:keyref name="FK_Vendedor_Supervisor" refer="dbo_Supervisor_Constraint1">
+          <xs:selector xpath=".//dbo_Vendedor" />
+          <xs:field xpath="Código_x0020_Supervisor" />
+        </xs:keyref>
+        <xs:keyref name="FK_Factura_Vendedor" refer="dbo_Vendedor_Constraint1">
+          <xs:selector xpath=".//dbo_Factura" />
+          <xs:field xpath="Código_x0020_Vendedor" />
+        </xs:keyref>
+        <xs:keyref name="FK_Factura_País" refer="dbo_País_Constraint1">
+          <xs:selector xpath=".//dbo_Factura" />
+          <xs:field xpath="Código_x0020_País" />
+        </xs:keyref>
+        <xs:keyref name="FK_Factura_Sector" refer="dbo_Sector_Constraint1">
+          <xs:selector xpath=".//dbo_Factura" />
+          <xs:field xpath="Código_x0020_Sector" />
+        </xs:keyref>
+        <xs:keyref name="FK_Factura_Gaseosa" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Factura" />
+          <xs:field xpath="Código_x0020_Gaseosa" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Facturas xmlns="" />
+  </Schema>
+</DataSourceView>

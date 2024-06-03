@@ -1,0 +1,1108 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/1/2024 12:19:51 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SQL_SERVER"
+  DTS:CreatorName="SQL_Server\SQL_Admin"
+  DTS:Description="DTS Wizard-generated package"
+  DTS:DTSID="{99851A08-A885-4CD8-A606-5A41A8ECA225}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="17418"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Factura"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{D39A5F9F-A26C-4522-922C-1596E78D424F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D8A343AA-1773-4305-81D7-38AFA4558426}"
+      DTS:ObjectName="DestinationConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=SQL_SERVER\MSSQLSERVER01;User ID=sa;Initial Catalog=facturas;Provider=SQLOLEDB;Auto Translate=false;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAANoxeA5py6Emz7MZOuSuIpQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAsa78JdZWNbhua8IsKisSSZV0B1uxG6DR9ie9XCxs5DwAAAAAOgAAAAAIAACAAAAAh1qaFCnKSFL014NVfFZAGt2B6oZkmGwPkeZu/CrclkyAAAADbewjEfBQzcE2+QVFyojQ41EQPZrrntwMdyt9dci7u40AAAAA8QXCQK3B2i+2UvDVz9OFFEH1efxlsqsJZeU+KHUGbLdw4sUP+E5tc0lVzA8mfPa6KVIdSzlUu76LwxE5ZAXi1</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionExcel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{6FF6FC3F-3921-4F39-A1A5-3C296C05713E}"
+      DTS:ObjectName="SourceConnectionExcel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\SQL_Admin\Desktop\Datos a procesar\Facturas.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea de SQL Preparación 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:DTSID="{417D03F7-2149-447F-B5D6-7FBB4FC94E4E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea de SQL Preparación 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{D8A343AA-1773-4305-81D7-38AFA4558426}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[Factura$] (&#xA;[Serie] int,&#xA;[Número] numeric(38,0),&#xA;[Fecha] datetime,&#xA;[Código Sector] int,&#xA;[Código País] int,&#xA;[Código Vendedor] int,&#xA;[Código Gaseosa] int,&#xA;[Ppto] float,&#xA;[Cantidad] numeric(38,0),&#xA;[Merma] numeric(38,0),&#xA;[Subtotal] money,&#xA;[IGV] money,&#xA;[Total] money&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{176EE8C4-7A93-4168-AA12-D13CE323C675}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos 0 - 0"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Serie]"
+                      cachedDataType="r8"
+                      cachedName="Serie"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Serie]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Número]"
+                      cachedDataType="r8"
+                      cachedName="Número"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Número]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Código Sector]"
+                      cachedDataType="r8"
+                      cachedName="Código Sector"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Sector]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Código País]"
+                      cachedDataType="r8"
+                      cachedName="Código País"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código País]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Código Vendedor]"
+                      cachedDataType="r8"
+                      cachedName="Código Vendedor"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Vendedor]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Código Gaseosa]"
+                      cachedDataType="r8"
+                      cachedName="Código Gaseosa"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Gaseosa]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Cantidad]"
+                      cachedDataType="r8"
+                      cachedName="Cantidad"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Cantidad]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Merma]"
+                      cachedDataType="r8"
+                      cachedName="Merma"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Merma]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Subtotal]"
+                      cachedDataType="r8"
+                      cachedName="Subtotal"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Subtotal]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[IGV]"
+                      cachedDataType="r8"
+                      cachedName="IGV"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[IGV]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos].Columns[Total]"
+                      cachedDataType="r8"
+                      cachedName="Total"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Total]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Serie]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Serie]"
+                      name="Serie"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Serie]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Número]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Número]"
+                      name="Número"
+                      precision="38"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Número]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Sector]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Sector]"
+                      name="Código Sector"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Sector]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código País]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código País]"
+                      name="Código País"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código País]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Vendedor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Vendedor]"
+                      name="Código Vendedor"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Vendedor]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Gaseosa]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Gaseosa]"
+                      name="Código Gaseosa"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Gaseosa]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Cantidad]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Cantidad]"
+                      name="Cantidad"
+                      precision="38"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Cantidad]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Merma]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Merma]"
+                      name="Merma"
+                      precision="38"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Merma]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Subtotal]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Subtotal]"
+                      name="Subtotal"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Subtotal]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[IGV]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[IGV]"
+                      name="IGV"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[IGV]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Total]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Total]"
+                      name="Total"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Total]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Destino - Factura$"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino - Factura$"
+              usesDispositions="true"
+              validateExternalMetadata="False"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Factura$]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionOLEDB]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Serie]"
+                      cachedDataType="i4"
+                      cachedName="Serie"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Serie]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Serie]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Número]"
+                      cachedDataType="numeric"
+                      cachedName="Número"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Número]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Número]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Fecha]"
+                      cachedDataType="date"
+                      cachedName="Fecha"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Fecha]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Fecha]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Código Sector]"
+                      cachedDataType="i4"
+                      cachedName="Código Sector"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Código Sector]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Sector]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Código País]"
+                      cachedDataType="i4"
+                      cachedName="Código País"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Código País]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código País]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Código Vendedor]"
+                      cachedDataType="i4"
+                      cachedName="Código Vendedor"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Código Vendedor]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Vendedor]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Código Gaseosa]"
+                      cachedDataType="i4"
+                      cachedName="Código Gaseosa"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Código Gaseosa]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Código Gaseosa]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Ppto]"
+                      cachedDataType="r8"
+                      cachedName="Ppto"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Ppto]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Ppto]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Cantidad]"
+                      cachedDataType="numeric"
+                      cachedName="Cantidad"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Cantidad]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Cantidad]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Merma]"
+                      cachedDataType="numeric"
+                      cachedName="Merma"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Merma]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Merma]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Subtotal]"
+                      cachedDataType="cy"
+                      cachedName="Subtotal"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Subtotal]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Subtotal]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[IGV]"
+                      cachedDataType="cy"
+                      cachedName="IGV"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[IGV]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[IGV]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].Columns[Total]"
+                      cachedDataType="cy"
+                      cachedName="Total"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Total]"
+                      lineageId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos].Columns[Total]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Serie]"
+                      dataType="i4"
+                      name="Serie" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Número]"
+                      dataType="numeric"
+                      name="Número"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Fecha]"
+                      dataType="date"
+                      name="Fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Código Sector]"
+                      dataType="i4"
+                      name="Código Sector" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Código País]"
+                      dataType="i4"
+                      name="Código País" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Código Vendedor]"
+                      dataType="i4"
+                      name="Código Vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Código Gaseosa]"
+                      dataType="i4"
+                      name="Código Gaseosa" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Ppto]"
+                      dataType="r8"
+                      name="Ppto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Cantidad]"
+                      dataType="numeric"
+                      name="Cantidad"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Merma]"
+                      dataType="numeric"
+                      name="Merma"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Subtotal]"
+                      dataType="cy"
+                      name="Subtotal" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[IGV]"
+                      dataType="cy"
+                      name="IGV" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input].ExternalColumns[Total]"
+                      dataType="cy"
+                      name="Total" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Destino - Factura$.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Destino - Factura$.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Destino - Factura$.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos 1\Origen - Factura$"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Origen - Factura$"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">Factura$</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionExcel]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionExcel]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Serie]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Serie]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Serie]"
+                      name="Serie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Número]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Número]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Número]"
+                      name="Número"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Fecha]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Fecha]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Fecha]"
+                      name="Fecha"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Sector]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Código Sector]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Sector]"
+                      name="Código Sector"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código País]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Código País]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código País]"
+                      name="Código País"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Vendedor]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Código Vendedor]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Vendedor]"
+                      name="Código Vendedor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Gaseosa]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Código Gaseosa]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Código Gaseosa]"
+                      name="Código Gaseosa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Ppto]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Ppto]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Ppto]"
+                      name="Ppto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Cantidad]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Cantidad]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Cantidad]"
+                      name="Cantidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Merma]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Merma]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Merma]"
+                      name="Merma"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Subtotal]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Subtotal]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Subtotal]"
+                      name="Subtotal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[IGV]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[IGV]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[IGV]"
+                      name="IGV"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Total]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Total]"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].Columns[Total]"
+                      name="Total"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Serie]"
+                      dataType="r8"
+                      name="Serie" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Número]"
+                      dataType="r8"
+                      name="Número" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Fecha]"
+                      dataType="date"
+                      name="Fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Código Sector]"
+                      dataType="r8"
+                      name="Código Sector" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Código País]"
+                      dataType="r8"
+                      name="Código País" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Código Vendedor]"
+                      dataType="r8"
+                      name="Código Vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Código Gaseosa]"
+                      dataType="r8"
+                      name="Código Gaseosa" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Ppto]"
+                      dataType="r8"
+                      name="Ppto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Cantidad]"
+                      dataType="r8"
+                      name="Cantidad" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Merma]"
+                      dataType="r8"
+                      name="Merma" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Subtotal]"
+                      dataType="r8"
+                      name="Subtotal" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[IGV]"
+                      dataType="r8"
+                      name="IGV" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel].ExternalColumns[Total]"
+                      dataType="r8"
+                      name="Total" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Serie]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Serie]"
+                      name="Serie" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Número]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Número]"
+                      name="Número" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Fecha]"
+                      dataType="date"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Fecha]"
+                      name="Fecha" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Código Sector]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Código Sector]"
+                      name="Código Sector" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Código País]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Código País]"
+                      name="Código País" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Código Vendedor]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Código Vendedor]"
+                      name="Código Vendedor" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Código Gaseosa]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Código Gaseosa]"
+                      name="Código Gaseosa" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Ppto]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Ppto]"
+                      name="Ppto" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Cantidad]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Cantidad]"
+                      name="Cantidad" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Merma]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Merma]"
+                      name="Merma" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Subtotal]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Subtotal]"
+                      name="Subtotal" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[IGV]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[IGV]"
+                      name="IGV" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Total]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[Total]"
+                      name="Total" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos 1.Paths[Salida de conversión de datos]"
+              endId="Package\Tarea Flujo de datos 1\Destino - Factura$.Inputs[Destination Input]"
+              name="Salida de conversión de datos"
+              startId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Tarea Flujo de datos 1.Paths[Salida de origen de Excel]"
+              endId="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de Excel"
+              startId="Package\Tarea Flujo de datos 1\Origen - Factura$.Outputs[Salida de origen de Excel]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[{5701D99B-BBB5-43AF-AA61-C14B36BE1A8F\}]"
+      DTS:CreationName=""
+      DTS:DTSID="{5701D99B-BBB5-43AF-AA61-C14B36BE1A8F}"
+      DTS:From="Package\Tarea de SQL Preparación 1"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="{5701D99B-BBB5-43AF-AA61-C14B36BE1A8F}"
+      DTS:To="Package\Tarea Flujo de datos 1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Flujo de datos 1"
+          TopLeft="18.5,107.5" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Tarea de SQL Preparación 1"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[{5701D99B-BBB5-43AF-AA61-C14B36BE1A8F\}]"
+          TopLeft="111,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Tarea Flujo de datos 1\Origen - Factura$"
+          TopLeft="24.5,5.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Tarea Flujo de datos 1\Destino - Factura$"
+          TopLeft="22.5,209.5" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Tarea Flujo de datos 1\Conversión de datos 0 - 0"
+          TopLeft="5.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 1.Paths[Salida de origen de Excel]"
+          TopLeft="105.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos 1.Paths[Salida de conversión de datos]"
+          TopLeft="105.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
